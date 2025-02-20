@@ -27,7 +27,7 @@ test.describe('My Profile Test Suites',()=>{
         await expect(page.locator('li a[href="/account/profile"]')).toHaveCSS('background-color', 'rgb(166, 166, 219)'); // Assert background color
         await expect(page.locator('li a[href="/account/profile"]')).toHaveCSS('color', 'rgb(255, 255, 255)') //font color
     })
-    test.only('Test My Profile form page title',async({page})=>{
+    test('Test My Profile form page title',async({page})=>{
         //click My Profile Tab
         await page.getByRole('link', { name: 'My Profile' ,href: '/account/profile'}).click()
         //verify heading title My Profile
